@@ -1,9 +1,9 @@
 use_bpm 90
 
-live_loop :metronome do
-  sample :elec_plip, amp: 1
-  sleep 1
-end
+##| live_loop :metronome do
+##|   sample :elec_plip, amp: 1
+##|   sleep 1
+##| end
 
 live_loop :kick do
   sample :drum_heavy_kick
@@ -27,14 +27,17 @@ end
 
 live_loop :bass do
   use_synth :bass_foundation
-  play :d3
+  play :d1, attack: 0, release: 3
   sleep 1
-  play :a2
+  play :a1, attack: 0, release: 2
   sleep 1
-  play :g2
+  play :g1, attack: 1, release: 1
   sleep 1
-  play :a2
+  play :a1
   sleep 1
 end
 
+live_loop :melody do
+  play_pattern_timed [:e4, :g4, :b4, :e4, :a4, :c5, :e4, :g4, :b4, :b3, :eb4, :gb4], [0.5, 0.5, 1, 0.5, 0.5, 1]
+end
 
