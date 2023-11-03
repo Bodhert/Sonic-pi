@@ -29,3 +29,5 @@ los niveles a los que pueden llegar ya estan preconfigurados. la duracion del so
 
 # Samples
 el `sleep` solo describe cuanto se separa un sonido del otro, no  la duracion, es decir que si el sample dura mas que el sleep se va a sobreponer
+
+los samples son sonidos pregrabados como numeros que dicen como mover el cono de sonido para reproducirlo (nunca habia pensado en esto la verdad), para reproducir el sonido lo mas fiel posible, se necesitan guardar muchos por segundo
