@@ -31,3 +31,7 @@ los niveles a los que pueden llegar ya estan preconfigurados. la duracion del so
 el `sleep` solo describe cuanto se separa un sonido del otro, no  la duracion, es decir que si el sample dura mas que el sleep se va a sobreponer
 
 los samples son sonidos pregrabados como numeros que dicen como mover el cono de sonido para reproducirlo (nunca habia pensado en esto la verdad), para reproducir el sonido lo mas fiel posible, se necesitan guardar muchos por segundo
+
+* Rate: lo podemos ver como un resorte, si le ponemos 2 estamos comprimiendo el resorte a la mitad, si le ponemos menos de 1, lo estamos alargando, esta transformacion conlleva a que se modifique la densidad del resorte (numero de alambres por cm) y en el sonido se traduce a una modificación del pitch, entre mas lo 'precione' mayor será el pitch, y viceversa
+
+## math behin
