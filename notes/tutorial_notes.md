@@ -34,4 +34,8 @@ los samples son sonidos pregrabados como numeros que dicen como mover el cono de
 
 * Rate: lo podemos ver como un resorte, si le ponemos 2 estamos comprimiendo el resorte a la mitad, si le ponemos menos de 1, lo estamos alargando, esta transformacion conlleva a que se modifique la densidad del resorte (numero de alambres por cm) y en el sonido se traduce a una modificación del pitch, entre mas lo 'precione' mayor será el pitch, y viceversa
 
-## math behin
+## math behind
+un sample es si no una lista de numeros que me dice en donde se deberia encontrar el speaker en determinado momento del tiempo
+![Alt text](resources/waveform.png)
+
+cuando pongo un rate menor que 1 básicamente estoy dividiendo el `waveform`
