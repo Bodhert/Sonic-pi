@@ -39,3 +39,9 @@ un sample es si no una lista de numeros que me dice en donde se deberia encontra
 ![Alt text](resources/waveform.png)
 
 cuando pongo un rate menor que 1 básicamente estoy dividiendo el `waveform`
+
+
+adsr significa, ataque, decay, sustain y release, y los samples a diferencia de los sintentizadores, solo se puede recortar el tiempo mas no alargarlo, según el sample sonic pi automagicamente calcula el valor del sustain. el release trabaja desde el final del sample haste el inicio
+
+digamos si el track dura `1.75s` y le doy un ataque de `0.75s` y un release de `0.75s`
+el sustain deberia de ser calculad a `0.25s` 
