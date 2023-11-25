@@ -45,3 +45,14 @@ adsr significa, ataque, decay, sustain y release, y los samples a diferencia de 
 
 digamos si el track dura `1.75s` y le doy un ataque de `0.75s` y un release de `0.75s`
 el sustain deberia de ser calculad a `0.25s` 
+
+puedo setear el sustain a `0` y el track solo sonará lo que tenga el ataque y el release
+
+támbien podemos decidir donde queremos que inicie o termine nuestro sample, donde 0 es el inicio y 1 el final, si combino bien los parametros, me puede reversar el sample
+
+`rrand` retorna un valor entre dos valores excusivamente, es decir que no incluye los extremos
+
+`rrand_i` retorna un valor entre los dos incluyendolos
+
+`one_in` sirve bastante para los valores de verdadero o falso, me dice la probabilidad de que ocurra un evento `one_in(2)` es casi como tirar una moneda
+
