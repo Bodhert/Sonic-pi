@@ -56,3 +56,10 @@ támbien podemos decidir donde queremos que inicie o termine nuestro sample, don
 
 `one_in` sirve bastante para los valores de verdadero o falso, me dice la probabilidad de que ocurra un evento `one_in(2)` es casi como tirar una moneda
 
+los hilos nombrados solo existen una vez. no se pueden duplicar.
+
+se puede capturan en variables el resultado de llamar a play y sample,
+
+como muchos lenguajes de programacion, las variables globales que se modifican no se deben de modificar en el mismo thread por que se dan condiciones de carrera, aunque algunas cosas si las queramos compartir como el bpm el synth, y de igual forma se nos provee con el mecanismo para modificarlas usando `get` y `set`
+
+recien comenze la 5.7
