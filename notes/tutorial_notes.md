@@ -62,4 +62,9 @@ se puede capturan en variables el resultado de llamar a play y sample,
 
 como muchos lenguajes de programacion, las variables globales que se modifican no se deben de modificar en el mismo thread por que se dan condiciones de carrera, aunque algunas cosas si las queramos compartir como el bpm el synth, y de igual forma se nos provee con el mecanismo para modificarlas usando `get` y `set`
 
-recien comenze la 5.7
+
+el parametro `phase` me dice cuanto puede durar un efecto, entocnces si lo pongo bajito como `0.125` sonará rapido, cuando se anidan los efectos son aplicados desde lo mas interno a lo mas externo	
+
+effects can be manipulated with the `|r|` goalpost option 
+
+scales and chords are great to be playing randomly to explore
