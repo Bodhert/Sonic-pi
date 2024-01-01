@@ -33,7 +33,7 @@ defmodule OscElixir do
     events
     |> Enum.each(&IO.inspect/1)
 
-    # Wait 5 second before reply
+    # Wait that milliseconds before reply before reply
     Process.sleep(500)
     ExOSC.Client.send_message(client, %OSC.Message{path: "/pong", args: [50, 100, 1]})
 
