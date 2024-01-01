@@ -68,3 +68,9 @@ el parametro `phase` me dice cuanto puede durar un efecto, entocnces si lo pongo
 effects can be manipulated with the `|r|` goalpost option 
 
 scales and chords are great to be playing randomly to explore
+
+los live_loops generan un evento cue que sirve para syncronizarse. cue y sync es un wrapper sobre el time state
+
+podemos crear cues de strings y hacer pattern matching sobre los mismos.
+ejemplo: `sync "/*/*/*"` sincronizaria con cualquier patron que genere evento `cue`
+como lo sgte  `cue "/foo/bar/baz"`
