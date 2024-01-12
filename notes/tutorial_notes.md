@@ -74,3 +74,12 @@ los live_loops generan un evento cue que sirve para syncronizarse. cue y sync es
 podemos crear cues de strings y hacer pattern matching sobre los mismos.
 ejemplo: `sync "/*/*/*"` sincronizaria con cualquier patron que genere evento `cue`
 como lo sgte  `cue "/foo/bar/baz"`
+
+para crear un audio perpetuo de una entrada utilizamos `live_audio :foo` puedo tener multiples live loops llamando ese live audio y se va a cambiar el contexto automaticamente
+
+
+https://github.com/binarysweets/sonic-pi-monthly-challenge/tree/main/challenge-1
+
+lo que me permite diferenciar que el sonido venga de una guitarra o de un piano es el timbre
+
+:r representa rest o silencio
