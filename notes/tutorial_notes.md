@@ -83,3 +83,18 @@ https://github.com/binarysweets/sonic-pi-monthly-challenge/tree/main/challenge-1
 lo que me permite diferenciar que el sonido venga de una guitarra o de un piano es el timbre
 
 :r representa rest o silencio
+
+
+using rate on a drum samples cretes different types of drum 
+
+```ruby
+live_loop :drums do
+  use_random_seed 2001
+  16.times do
+    r = rrand(0.5, 10)
+    sample :drum_bass_hard, rate: 50, amp: rand
+    sleep 0.125
+  end
+  
+end
+```
