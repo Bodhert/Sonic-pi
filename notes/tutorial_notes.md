@@ -98,3 +98,40 @@ live_loop :drums do
   
 end
 ```
+
+## Controlling your sound tutorial
+Los synths devuelven cosas llamadas SynthNode que representa un sonido que se emite
+el `cutoff_slide` me dice que tan rapido me voy a mover a la proxima nota, es basicamente como si tocara una tecla y deslizara el dedo hasta llegar a la otra
+támbien se puede utilizar en los `FX`
+
+## Amplitude Modulation
+
+```ruby
+with_fx :slicer, phase: 0.125 do
+  sample :loop_mika
+end
+```
+
+esto puede crear nuevos ritmo de un tambor hay que ser concientes que el phase funciona por beat, por lo cual para que suene coherente, debemos hacer algo como
+
+`use_sample_bpm :the_drum_sampe`
+
+
+### Five live coding tecniques 
+si se usa sync en un live loop se puede uno recuperar del error por que dependera de la señal que el otro le envie
+
+es mas importante hacer sonidos que no nos gustan que hacer sonidos que nos gusten
+
+reversar el codigo en la mente, es decir, poder leerlo e imaginarnos como va a sonar,
+
+es importante saber que existe un main mixer que afectara todos los sonidos
+
+`set_mixer_control! lpf: 50 `
+`reset_mixer!` -> para resetearlo
+
+### Sampling streching
+jugar con el rate del sample sube y baja el pitch, doblar el rate resulta en el pitch siendo una octava mas grande, y
+el resultado inverso bajando el rate
+
+### Additive Synthesis
+tal cual como mezclar las pinturas, si mezclamos muchos colores, va a resultar siendo un marron (: 
