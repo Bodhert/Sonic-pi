@@ -135,3 +135,22 @@ el resultado inverso bajando el rate
 
 ### Additive Synthesis
 tal cual como mezclar las pinturas, si mezclamos muchos colores, va a resultar siendo un marron (: 
+
+al mezclar varios sonidos de diferentes sintetizadores, puedo generar uno `nuevo` y definirlo como una funcion ej
+``` ruby
+define :bell do |n|
+  synth :tri, note: n - 12, release: 0.1
+  synth :tri, note: n + 0.1, release: 0.1
+  synth :tri, note: n - 0.1, release: 0.1
+  synth :tri, note: n, release: 0.2
+  
+  synth :sine, note: n + 24, release: 2
+  synth :sine, note: n + 24.1, release: 2
+  synth :sine, note: n + 24.2, release: 0.5
+  synth :sine, note: n + 11.8, release: 2
+  synth :sine, note: n, release: 2
+  
+end
+```
+
+
