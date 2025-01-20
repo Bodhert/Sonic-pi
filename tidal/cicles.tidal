@@ -1,0 +1,12 @@
+d1 $ sound "db"
+
+d2 $ sound "~ sn"
+
+hush
+
+
+-- tidal just creates patterns ans send signal to super colider
+-- to supperdirt so superdirt is a synth
+
+
+

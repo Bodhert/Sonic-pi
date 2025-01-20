@@ -1,0 +1,94 @@
+
+-- mini notation: it does rythm and sequences and is indicated by ",
+-- is a language inside tidal
+-- functions transform those sequnces 
+
+d1 $sound "kick snare" 
+
+-- the more things we add, the faster they go
+-- it tries to fit everything in the same cycle
+-- and all the other ones will try to match in
+-- the same cycle
+
+d1 $ sound "kick snare clap clap clap" 
+
+d2 $ sound "clap"
+
+hush
+
+-- s and sound means the same thing, thats due live coding
+-- interaction 
+
+-- I can select the sample in the mini notatio
+
+d1 $ s "kick:2" 
+
+-- or with n pattern
+
+d1 $ n "0 3 5" # "kick"
+
+d1 $ s "kick:0 kick:3 kick:5" -- are the same
+
+-- ~ "empty sound" 
+
+d1 $ n "0 3 ~" # "kick"
+
+
+-- subsequncing [  ]
+
+d1 $ n "0 3 [5 5]" # "kick"
+
+d1 $ n "[0 1 2] 3 [5 5]" # "kick"
+
+d1 $ n "[0 1 2] 3 [5 [5 1 4 5] ]" # "kick"
+
+d1 $ n "[0 1 2] 3 [5 [[5 3 4]  1 4 5] ]" # "kick"
+
+hush
+
+---------
+
+-- you can download a samples pack and load it in supercollider wiht
+-- the following
+
+-- ~dirt.loadSoundFiles("<path-to-your-file")
+
+d1 $ sound "cpu:0" 
+
+-- sequencing:
+
+d1 $ sound "cpu:3 cpu:5" 
+
+-- using n pattern
+
+d1 $ n "0 4 3 5" # sound "cpu" 
+
+hush
+
+-------------
+
+d1 $ sound "bd sd"
+
+d2 $ sound "arpy"
+  # crush 3
+
+d1 silence -- it stops the selected pattern
+
+hush
+
+-- not always the things starts 
+-- commands positions does not matter
+
+-------
+d1 $ sound "db"
+
+d2 $ sound "~ sn"
+
+hush
+
+
+-- tidal just creates patterns ans send signal to super colider
+-- to supperdirt so superdirt is a synth
+
+
+
