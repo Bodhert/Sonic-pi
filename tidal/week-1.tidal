@@ -1,4 +1,58 @@
+--- MINI notation week-1 part 2
+d1 $ sound "hi lo [hi hi]"
 
+hush
+
+--- * x multiplies x times the step, meaning that it acelerates the speed
+--- of that sound x times
+
+--- this two things are equivalent
+
+d1 $ sound "hi lo*3"
+
+d1 $ sound "hi [lo lo lo]"
+
+---
+
+d1 $ sound "hi [hi lo]*1.5" -- this make and alternation between
+                            -- hi lo hi and lo hi lo
+
+d1 $ sound "hi*1.5"
+
+--- ! bang operator is a repeater
+
+d1 $ sound "hi lo lo lo"
+
+d1 $ sound "hi lo!3"
+
+d1 $ sound "hi lo*3!3"
+
+hush
+
+
+-- slow down with / it basically divides the time 
+
+d1 $ sound "hi lo/2"
+
+d1 $ sound "clap:4 [lo hi]/2"
+
+d1 $ sound "clap:4 [lo hi bd sd]/2"
+
+d1 $ fast 2 $ sound "clap:4 [lo hi bd sd]/4" 
+
+--- dividing by weird numbers create weird pattern
+
+d1 $ "clap:4 [lo hi bd sd]/3"
+
+
+--- im am on the part 2 11:10 min
+
+
+d1 $ fast 2 $ sound "clap:4 [lo hi bd sd]/4" 
+
+hush  
+
+---
 -- mini notation: it does rythm and sequences and is indicated by ",
 -- is a language inside tidal
 -- functions transform those sequnces 
