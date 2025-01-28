@@ -1,0 +1,41 @@
+-- task: make the code shorter
+-- 1
+d1 $ sound "kick snare snare"
+
+d1 $  sound "kick snare!2"
+
+-- 2
+d1 $ sound "kick [snare snare]"
+
+d1 $ sound "kick [snare!]" -- my solution
+
+d1 $ sound "kick snare*2"
+
+hush
+
+-- 3
+
+d1 $ sound "kick snare kick snare kick snare"
+
+d1 $ sound "[kick snare]*3" -- my solution
+-- or
+
+d1 $ sound "[kick snare]!3"
+
+hush
+
+-- 4
+
+d1 $ n "0 [1 2 3]/3" # sound "cpu2"
+
+
+
+
+d1 $ n "[0 0 2] [4 5 6 7] [4 1] [0 3 0 3]" # sound "cpu2"
+
+d1 $ sound "kick snare kick snare kick snare clap"
+
+d1 $ sound "[kick snare kick snare kick snare] clap"
+
+d1 $ sound "bd sd sd sd bd [sd sd sd]"
+
