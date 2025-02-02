@@ -45,12 +45,49 @@ d1 $ fast 2 $ sound "clap:4 [lo hi bd sd]/4"
 d1 $ "clap:4 [lo hi bd sd]/3"
 
 
---- im am on the part 2 11:10 min
 
 
 d1 $ fast 2 $ sound "clap:4 [lo hi bd sd]/4" 
 
 hush  
+
+-- pholyphony: various sound happening at the same time
+
+d1 $ sound "bd sn"
+
+d2 $ sound "arpy*3"
+
+-- the previous is equivalent to
+
+d1 $ sound "[bd sn, arpy*3]"
+
+d1 $ sound "[bd sn, arpy*3, mt ht lt mt] [clap:6 snare]"
+
+-- {} -> align the steps? what I understood is that every argument on the other side
+-- of the comma align with the argument in the other side
+-- {bd sd, arpy*3} -> bd arpy, sd arpy, bd arpy ...
+
+d1 $ sound "{bd sd, arpy*4}"
+
+hush
+
+--- rythmic feet with .
+
+d1 $ sound "[bd sd] [mt ht lt] [arpy arpy:4]"
+
+-- is the same as
+
+d1 $ sound "bd sd . mt ht lt . arpy arpy:4"
+
+hush
+
+-- <> notation means to pick one per cycle
+
+d1 $ "clap:4 [lo hi bd]/3"
+
+-- the same as:
+
+d1 $ "clap:4 <lo hi bd>"
 
 ---
 -- mini notation: it does rythm and sequences and is indicated by ",
