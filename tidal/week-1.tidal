@@ -1,4 +1,19 @@
 --- MINI notation week-1 part 2
+--- @ means make the step x time as long, is to have more "flexible" tempos
+
+tidal_version -- check the tidal version
+
+-- euclidian notation
+
+d1 $ sound "bd(3,4)"
+
+
+
+hush
+
+
+
+--- MINI notation week-1 part 2
 d1 $ sound "hi lo [hi hi]"
 
 hush
