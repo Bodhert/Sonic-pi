@@ -1,0 +1,41 @@
+d1 $ sound "cpu" # squiz 6
+
+d1 $ n "1 2 [3 5] 6" # sound "cpu" # vowel "i"
+
+d1 $ n "1 2 [3 5] 6" # sound "cpu" # vowel "a e i o u"
+
+-- you can add letter to pause the effect between notes
+d1 $ n "0 1 0 [2 4] 2 ~ 1*2 3" # s "cpu" # vowel "a p e"
+
+
+d1 $ n "1 2 [3 5] 6" # sound "cpu" # speed 1
+
+d1 $ n "1 2 [3 5] 6" # sound "cpu" # speed 1
+
+d1 $ n "0 0 [4 3] 4" # sound "cpu" # crush 1
+
+d1 $ n "0 0 [4 3] 4" # sound "cpu" # crush "3 16"
+
+d1 $ n "0 1 1 [2 3*1]" # sound "cpu" # squiz "4 9 9"
+
+d1 $ sound "cpu" # squiz "1" # n "0"
+
+hush
+
+d1 $ n "0 1 0 [2 4] 2 ~ 1*2 3" # s "cpu" # squiz "4 1 0 3"
+
+d1 $ squiz "4 1 0 3" # s "cpu"   # n "0 1 0 [2 4] 2 ~ 1*2 3" 
+
+d1 $ sound "kick kick snare snare" # gain "4 0.7 0.6 0.5"
+
+d1 $ sound "[hh*16, kick:8 snare:4 [~ kick:8] snare]" # gain "[1 1.2]"
+
+
+d1 $ sound 
+
+
+
+
+-- # -> it takes the structure from the left, for me it looks like a |> (pipe)
+-- operator
+hush
