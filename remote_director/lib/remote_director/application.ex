@@ -9,6 +9,7 @@ defmodule RemoteDirector.Application do
   def start(_type, _args) do
     children = [
       RemoteDirectorWeb.Telemetry,
+      RemoteDirector.OSC,
       {DNSCluster, query: Application.get_env(:remote_director, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: RemoteDirector.PubSub},
       # Start a worker by calling: RemoteDirector.Worker.start_link(arg)
