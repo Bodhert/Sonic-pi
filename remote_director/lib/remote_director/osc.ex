@@ -13,14 +13,14 @@ defmodule RemoteDirector.OSC do
     {:consumer, %{client: client}}
   end
 
-  def send_msg() do
-    GenStage.call(__MODULE__, :test)
+  def send_msg(name \\ "", answer \\ "") do
+    GenStage.call(__MODULE__, {name, answer})
   end
 
   # -- Server side
   @impl true
-  def handle_call(:test, _from, %{client: client} = state) do
-    ExOSC.Client.send_message(client, %OSC.Message{path: "/ping", args: [50, 100, 1]})
+  def handle_call({name, answer}, _from, %{client: client} = state) do
+    ExOSC.Client.send_message(client, %OSC.Message{path: "/ping", args: [name, answer, 100]})
     {:reply, :ok, [], state}
   end
 

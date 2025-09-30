@@ -26,7 +26,7 @@ defmodule RemoteDirectorWeb.ScoreLive.Form do
 
   @impl true
   def handle_event("submit", %{"name" => name, "answer" => answer}, socket) do
-    RemoteDirector.OSC.send_msg()
+    RemoteDirector.OSC.send_msg(name, answer)
 
     {
       :noreply,
