@@ -1,3 +1,13 @@
 *.DS_Store
+# Ignore common audio formats
 *.wav
 *.mp3
+*.flac
+*.aiff
+*.aif
+*.ogg
+*.m4a
+*.aac
+*.wma
+*.alac
+
