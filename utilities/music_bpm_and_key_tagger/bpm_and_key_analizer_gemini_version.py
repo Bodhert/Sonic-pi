@@ -65,9 +65,9 @@ def get_bpm(y, sr):
 def get_key(y, sr):
     """Analyzes and returns the Camelot Key for loaded audio."""
     try:
-        import pdb
+        #import pdb
 
-        pdb.set_trace()
+        #pdb.set_trace()
         chroma = librosa.feature.chroma_stft(y=y, sr=sr)
         chroma_mean = np.mean(chroma, axis=1)
 
